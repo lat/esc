@@ -140,6 +140,8 @@ main(int argc, char **argv)
 
            /* * * * Init. aio control block (aiocb) * * * */
 
+	memset(&a_write, 0, sizeof(aiocb_t));
+
         a_write.aio_fildes = out_file;
         a_write.aio_offset = 0;                   /* write from current */
 /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
